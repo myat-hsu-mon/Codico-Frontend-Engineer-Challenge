@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3px;
+  flex-grow: 1;
+}
+.legend {
+  border: 1px solid green;
+  padding: 4px;
+
+  .flexContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    & > div:last-child {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      border: 1px solid purple;
+    }
+  }
+
+  .line {
+    width: 2px;
+    height: 100px;
+    background-color: black;
+    border: 1px solid red;
+  }
+}
+
+.currentTag {
+  width: 20px;
+  height: 3px;
+  background-color: purple;
+  display: inline-block;
+}

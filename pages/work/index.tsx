@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import Seo from "../../common/Seo";
 import workStyles from "../../styles/Work.module.scss";
 import Tags from "../../ components/Tags/Tags";
+import Work from "../../ components/Work";
 
 const Home: NextPage = () => {
   return (
@@ -16,10 +17,13 @@ const Home: NextPage = () => {
           <p>See 100% of our power.</p>
         </div>
 
-        <div>
+        <div className={workStyles.tags}>
           <Tags />
         </div>
-        <div>work results</div>
+
+        <div className={workStyles.workResults}>
+          <Work />
+        </div>
       </div>
     </div>
   );

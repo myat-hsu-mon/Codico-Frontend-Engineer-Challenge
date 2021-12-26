@@ -4,13 +4,18 @@
   border: 1px solid blue;
 }
 
+// TextWrapper
 .text {
   font-size: 60px;
   font-weight: 900;
-  line-height: 0.1;
-  border: 2px solid red;
+  line-height: 120%;
   max-width: 1000px;
-  margin: auto;
+  margin: 20px auto;
+  padding: 20px;
+
+  p {
+    margin: 0;
+  }
 
   p:last-child {
     color: $primaryColor;
@@ -19,6 +24,19 @@
 
 @media only screen and (max-width: 768px) {
   .text {
-    font-size: 50px;
+    font-size: 60px;
+    line-height: 100%;
   }
+}
+
+//Tags Wrapper
+.tags {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+//Works Wrapper
+.workResults {
+  background-color: rgb(223, 181, 223);
 }

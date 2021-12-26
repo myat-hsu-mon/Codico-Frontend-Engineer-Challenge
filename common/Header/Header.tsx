@@ -8,7 +8,7 @@ import headerStyles from "./Header.module.scss";
 const navs = [
   {
     name: "Work",
-    href: "/work",
+    href: "/work?tags=all",
   },
   {
     name: "Solutions",
