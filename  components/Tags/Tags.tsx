@@ -26,15 +26,12 @@ const Tags: NextPage = () => {
       </div>
       <div className={tagsStyles.legend}>
         <h6>Legend</h6>
-        <div className={tagsStyles.flexContainer}>
-          <div className={tagsStyles.line}></div>
-          <div>
+          <div className={tagsStyles.grid2}>
             <div>App</div>
             <div>Web</div>
             <div>Cms</div>
             <div>UI/UX</div>
           </div>
-        </div>
       </div>
     </div>
   );

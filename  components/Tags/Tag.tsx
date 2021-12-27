@@ -13,7 +13,7 @@ const Tag: NextPage<Tag> = ({ name, slug, onClick }) => {
   const router = useRouter();
   const tags = router.query.tags;
   return (
-    <div>
+    <div className={tagsStyles.tagCard}>
       {tags === slug && <span className={tagsStyles.currentTag}></span>}
       <button onClick={() => onClick(slug)}>{name}</button>
     </div>

@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 import workStyles from "./Work.module.scss";
 
@@ -12,10 +13,26 @@ const WorkCard: NextPage<WorkCardProps> = ({ work }) => {
     <Link href={`/work/${work.slug}`} passHref>
       <div
         className={workStyles.card}
-        style={{ background: `url(${work.images.normal})` }}
+        style={{
+          width: work.grid_size * 100 + "%",
+          display: "inline-block",
+          height: "500px",
+        }}
       >
-        {work.name}
-        {work.slug}
+        <div className={workStyles.textContainer}>
+          <h2>
+            {work.categories.map((category: any) => category.name).join(", ")}
+          </h2>
+          <h3>{work.name}</h3>
+        </div>
+        <Image
+          className={workStyles.image}
+          src={work.images.normal}
+          alt=""
+          layout="fill"
+          height={40}
+          width={40}
+        />
       </div>
     </Link>
   );

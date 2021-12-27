@@ -1,42 +1,47 @@
 @import "./variables";
 
 .container {
-  border: 1px solid blue;
-}
-
-// TextWrapper
-.text {
-  font-size: 60px;
-  font-weight: 900;
-  line-height: 120%;
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 20px;
-
-  p {
-    margin: 0;
-  }
-
-  p:last-child {
-    color: $primaryColor;
-  }
-}
-
-@media only screen and (max-width: 768px) {
+  // TextWrapper
   .text {
-    font-size: 60px;
-    line-height: 100%;
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 120%;
+    max-width: 75%;
+    margin: 20px auto;
+    padding: 8rem 0 0 0;
+
+    p {
+      margin: 0;
+    }
+
+    p:last-child {
+      color: $primaryColor;
+    }
+  }
+
+  //Tags Wrapper
+  .tags {
+    max-width: 75%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  //Works Wrapper
+  .workResults {
+    // background-color: rgb(223, 181, 223);
   }
 }
 
-//Tags Wrapper
-.tags {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 20px;
-}
+@media only screen and (max-width: 960px) {
+  .container {
+    .text {
+      font-size: 60px;
+      line-height: 100%;
+      max-width: 90%;
+    }
 
-//Works Wrapper
-.workResults {
-  background-color: rgb(223, 181, 223);
+    .tags {
+      max-width: 90%;
+    }
+  }
 }

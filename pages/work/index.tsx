@@ -2,14 +2,16 @@ import React from "react";
 import type { NextPage } from "next";
 
 import Seo from "../../common/Seo";
-import workStyles from "../../styles/Work.module.scss";
 import Tags from "../../ components/Tags/Tags";
 import Work from "../../ components/Work";
+import Header from "../../common/Header";
+import workStyles from "../../styles/Work.module.scss";
 
 const Home: NextPage = () => {
   return (
     <div>
       <Seo title="Our iOS, Android &amp; Web Development Work" />
+      <Header/>
       <div className={workStyles.container}>
         <div className={workStyles.text}>
           <p>Here’s 5% of</p>

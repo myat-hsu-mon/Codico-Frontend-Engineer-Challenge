@@ -1,17 +1,116 @@
-@import "../../styles/variables";
+@import "../../styles/_variables";
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid $primaryColor;
-  justify-content: center;
-  align-items: center;
+.container {
+  background-color: $lightColor;
+  padding: 4rem 2.5rem;
+  text-align: center;
+
+  .wrapper {
+    width: 80%;
+    margin: auto;
+
+    //chat title
+    h3 {
+      color: $primaryColor;
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    //chat Methods
+    .chatWrapper {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      padding: 2rem 0;
+
+      div {
+        border-right: 1px solid $dividerColor;
+        padding: 1rem 2rem 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h4 {
+          font-size: 1.8rem;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          transition: all 500ms linear;
+          padding: 1rem 0 0.5rem 0;
+
+          span:first-child {
+            margin-right: 10px;
+          }
+          &:hover {
+            color: $primaryColor;
+            span:last-child {
+              transform: translateX(5px);
+            }
+          }
+        }
+
+        p {
+          margin: 0;
+          font-size: 1rem;
+          font-weight: 200;
+        }
+      }
+
+      div:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  .contactWrapper {
+    div{
+      padding: 2rem 0;
+      a{
+        margin: 0 1rem;
+      }
+    }
+    p{
+      font-size: 1rem;
+      font-weight: 200;
+    }
+  }
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+@media only screen and (max-width: 960px) {
+  .container {
+    padding: 0 1rem;
+
+    .wrapper {
+      width: 100%;
+      padding: 5px;
+
+      .chatWrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 2rem 0;
+
+        div {
+          border-right: none;
+          border-bottom: 1px solid $dividerColor;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 1rem 1rem 1rem 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h4 {
+            display: flex;
+            justify-content: space-between;
+
+            span:first-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }

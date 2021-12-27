@@ -1,0 +1,78 @@
+{
+  "name": "KIWI Auto Marketplace",
+  "slug": "kiwi",
+  "colour_scheme": "#b7e146",
+  "web_url": "",
+  "ios_url": "",
+  "android_url": "",
+  "gallery": [
+      {
+          "normal": "https://cdn.codigo.co/uploads/2021/04/KIWI-1.png",
+          "retina": "https://cdn.codigo.co/uploads/2021/04/KIWI-1@2x.png"
+      },
+      {
+          "normal": "https://cdn.codigo.co/uploads/2021/04/KIWI-2.png",
+          "retina": "https://cdn.codigo.co/uploads/2021/04/KIWI-2@2x.png"
+      },
+      {
+          "normal": "https://cdn.codigo.co/uploads/2021/04/KIWI-3.png",
+          "retina": "https://cdn.codigo.co/uploads/2021/04/KIWI-3@2x.png"
+      },
+      {
+          "normal": "https://cdn.codigo.co/uploads/2021/04/KIWI-4.png",
+          "retina": "https://cdn.codigo.co/uploads/2021/04/KIWI-4@2x.png"
+      },
+      {
+          "normal": "https://cdn.codigo.co/uploads/2021/04/KIWI-5.png",
+          "retina": "https://cdn.codigo.co/uploads/2021/04/KIWI-5@2x.png"
+      },
+      {
+          "normal": "https://cdn.codigo.co/uploads/2021/04/KIWI-6.png",
+          "retina": "https://cdn.codigo.co/uploads/2021/04/KIWI-6@2x.png"
+      }
+  ],
+  "description": "Myanmar newest 2nd hand car buying, bidding and selling marketplace! You can even add an insurance plan when you buy a car and have the platform settle all the mundane paperwork while you sit back and collect your car when it’s ready.",
+  "key_features": "<ul>\r\n \t<li>Car Inspection with 204 Check Points</li>\r\n \t<li>Real-time Auction Bidding</li>\r\n</ul>",
+  "categories": [
+      {
+          "term_id": 29,
+          "name": "Others",
+          "slug": "others",
+          "type": "work_category"
+      },
+      {
+          "term_id": 30,
+          "name": "Start-ups",
+          "slug": "start-ups",
+          "type": "work_category"
+      }
+  ],
+  "roles": [
+      {
+          "term_id": 21,
+          "name": "app",
+          "slug": "app",
+          "type": "work_role"
+      },
+      {
+          "term_id": 22,
+          "name": "web",
+          "slug": "web",
+          "type": "work_role"
+      },
+      {
+          "term_id": 23,
+          "name": "cms",
+          "slug": "cms",
+          "type": "work_role"
+      },
+      {
+          "term_id": 24,
+          "name": "uiux",
+          "slug": "uiux",
+          "type": "work_role"
+      }
+  ],
+  "prev_post_slug": "ecolab",
+  "next_post_slug": "furama"
+}

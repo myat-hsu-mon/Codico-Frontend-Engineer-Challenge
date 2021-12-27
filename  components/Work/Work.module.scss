@@ -1,11 +1,60 @@
+@import "../../styles/variables";
+
 //WorkList
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3px;
-  height: 300px;
-}
+// .grid {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+// }
 
 //WorkCard
 .card {
+  position: relative;
+  transition: all 400ms ease-in-out;
+
+  .textContainer {
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    z-index: 100;
+    color: $whiteColor;
+  }
+  .image {
+    transition: all 400ms ease-in-out;
+  }
+
+  &:hover{
+    .image{
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card {
+    position: relative;
+    transition: all 400ms ease-in-out;
+  
+    .textContainer {
+      position: absolute;
+      top: 4%;
+      left: 5%;
+      z-index: 100;
+      color: $whiteColor;
+    }
+    .image {
+      transition: all 400ms ease-in-out;
+      
+    }
+  
+    &:hover{
+      .image{
+        transform: scale(1.1);
+      }
+    }
+  }
+  
 }

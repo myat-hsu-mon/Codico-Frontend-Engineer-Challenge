@@ -1,6 +1,6 @@
 [
   {
-      "name": "Food &amp; Beverage",
+      "name": "Food & Beverage",
       "slug": "food-and-beverage"
   },
   {
@@ -8,11 +8,11 @@
       "slug": "media"
   },
   {
-      "name": "Transport &amp; Logistics",
+      "name": "Transport & Logistics",
       "slug": "transport-and-logistics"
   },
   {
-      "name": "Banking &amp; Finance",
+      "name": "Banking & Finance",
       "slug": "banking-finance"
   },
   {
@@ -28,7 +28,7 @@
       "slug": "healthcare"
   },
   {
-      "name": "Retail &amp; Entertainment",
+      "name": "Retail & Entertainment",
       "slug": "retail-and-entertainment"
   },
   {
