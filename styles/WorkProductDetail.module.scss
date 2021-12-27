@@ -127,3 +127,16 @@
     }
   }
 }
+
+@media only screen and (max-width: 960px) {
+  .body {
+    grid-template-columns: 1fr;
+    .slider {
+      order: 2;
+    }
+    .arrowLeft,
+    .arrowRight {
+      display: none;
+    }
+  }
+}

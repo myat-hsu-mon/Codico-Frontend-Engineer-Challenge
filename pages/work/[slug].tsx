@@ -18,9 +18,9 @@ const WorkProductDetail: NextPage = ({ work }: any) => {
       if (index < gallery.length) {
         if (index !== gallery.length - 1) {
           setIndex((ind) => ind + 1);
+        } else {
+          setIndex(0);
         }
-      } else {
-        setIndex(0);
       }
     }, 3000);
     return () => clearInterval(intervalId);
