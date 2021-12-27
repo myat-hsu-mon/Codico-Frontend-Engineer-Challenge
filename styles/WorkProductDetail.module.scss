@@ -7,21 +7,23 @@
   padding: 1.5rem 2.5rem;
 
   div {
-    display: flex;
-    align-items: center;
-    transition: all 500ms linear;
+    a {
+      display: flex;
+      align-items: center;
+      transition: all 500ms linear;
 
-    span:first-child {
-      margin-right: 5px;
-      color: $primaryColor;
-    }
+      span:first-child {
+        margin-right: 5px;
+        color: $primaryColor;
+      }
 
-    span:last-child {
-      transition: all 400ms ease-in-out;
-    }
+      span:last-child {
+        transition: all 400ms ease-in-out;
+      }
 
-    &:hover span:last-child {
-      border-bottom: 1px solid $grayColor;
+      &:hover span:last-child {
+        border-bottom: 1px solid $grayColor;
+      }
     }
   }
   .requestBtn {
