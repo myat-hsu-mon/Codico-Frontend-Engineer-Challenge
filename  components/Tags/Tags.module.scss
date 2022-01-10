@@ -34,47 +34,49 @@
 }
 
 .tagCard {
-  display: flex;
+  position: relative;
   align-items: center;
   padding-top: 1rem;
-  transition: all 400ms ease-in-out;
-
-  .currentTag {
-    width: 17px;
-    height: 2px;
-    background-color: $primaryColor;
-  }
 
   button {
     border: none;
     background-color: $whiteColor;
+    color: $lightGrayColor;
     font-size: 1.1rem;
     font-weight: 100;
+    display: inline-block;
+    transition: all 0.3s;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1rem;
+      height: 2px;
+      background-color: transparent;
+      vertical-align: middle;
+      transition: all 0.3s;
+    }
 
     &:hover {
       cursor: pointer;
     }
   }
-  
-}
 
-
-@media only screen and (max-width: 960px) {
-
-  .container{
-    grid-template-columns: auto;
-    .legend{
-      margin-top: 1rem;
+  button.current {
+    color: $blackColor;
+    font-weight: 700;
+    &::before {
+      background-color: $primaryColor;
+      margin-right: 0.5rem;
     }
   }
-
-  
 }
 
-@media only screen and (max-width: 768px) {
-  .tagCard {
-    button{
-      // font-size: 0.9rem;
+@media only screen and (max-width: 980px) {
+  .container {
+    grid-template-columns: auto;
+    .legend {
+      margin-top: 1rem;
     }
   }
 }

@@ -3,6 +3,8 @@
 .card {
   position: relative;
   transition: all 400ms ease-in-out;
+  height: 500px;
+  display: inline-block;
 
   .textContainer {
     position: absolute;
@@ -13,41 +15,40 @@
   }
   .image {
     transition: all 400ms ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
-  &:hover{
-    .image{
+  &:hover {
+    .image {
       transform: scale(1.1);
     }
   }
 }
 
-@media only screen and (max-width: 768px){
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.gridHalf {
+  width: 50%;
+}
+
+.gridQuarter {
+  width: 25%;
+}
+
+@media only screen and (max-width: 980px) {
+  .gridHalf {
+    width: 100%;
   }
-  .card {
-    position: relative;
-    transition: all 400ms ease-in-out;
-  
-    .textContainer {
-      position: absolute;
-      top: 4%;
-      left: 5%;
-      z-index: 100;
-      color: $whiteColor;
-    }
-    .image {
-      transition: all 400ms ease-in-out;
-      
-    }
-  
-    &:hover{
-      .image{
-        transform: scale(1.1);
-      }
-    }
+
+  .gridQuarter {
+    width: 50%;
   }
-  
+}
+
+@media only screen and (max-width: 600px) {
+  .gridQuarter {
+    width: 100%;
+  }
 }

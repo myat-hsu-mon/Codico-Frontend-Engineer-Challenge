@@ -14,8 +14,12 @@ const Tag: NextPage<Tag> = ({ name, slug, onClick }) => {
   const tags = router.query.tags;
   return (
     <div className={tagsStyles.tagCard}>
-      {tags === slug && <span className={tagsStyles.currentTag}></span>}
-      <button onClick={() => onClick(slug)}>{name}</button>
+      <button
+        onClick={() => onClick(slug)}
+        className={tags === slug ? tagsStyles.current : ""}
+      >
+        {name}
+      </button>
     </div>
   );
 };

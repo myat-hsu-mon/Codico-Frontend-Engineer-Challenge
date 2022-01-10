@@ -9,15 +9,20 @@ type WorkCardProps = {
 };
 
 const WorkCard: NextPage<WorkCardProps> = ({ work }) => {
+  console.log("grid-size", work.grid_size);
+  console.log("grid-size", typeof work.grid_size);
   return (
     <Link href={`/work/${work.slug}`} passHref>
       <div
-        className={workStyles.card}
-        style={{
-          width: work.grid_size * 100 + "%",
-          display: "inline-block",
-          height: "500px",
-        }}
+        className={[
+          workStyles.card,
+          work.grid_size === 0.5 ? workStyles.gridHalf : workStyles.gridQuarter,
+        ].join(" ")}
+        // style={{
+        //   width: work.grid_size * 100 + "%",
+        //   display: "inline-block",
+        //   height: "500px",
+        // }}
       >
         <div className={workStyles.textContainer}>
           <h2>

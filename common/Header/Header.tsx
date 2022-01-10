@@ -3,7 +3,6 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { FiX } from "react-icons/fi";
 
 import Logo from "../../public/logo-codigo-red.svg";
 import headerStyles from "./Header.module.scss";
@@ -58,11 +57,7 @@ const Header: NextPage = () => {
               open ? headerStyles.show : headerStyles.hide,
             ].join(" ")}
           >
-            <div className={headerStyles.dismiss}>
-              <button onClick={handleClose}>
-                <FiX style={{ fontSize: "1.2rem" }} />
-              </button>
-            </div>
+            <div className={headerStyles.dismiss}></div>
             {navs.map(({ name, href }) => (
               <li className={headerStyles.navItem} key={name}>
                 <Link href={href} passHref>
@@ -83,11 +78,56 @@ const Header: NextPage = () => {
           <button className={headerStyles.requestBtn}>Request a quote</button>
           <button className={headerStyles.chatBtn}>{"Let's chat"}</button>
         </div>
-        <button onClick={handleOpen} className={headerStyles.hamburger}>
-          <span className={headerStyles.bar}></span>
-          <span className={headerStyles.bar}></span>
-          <span className={headerStyles.bar}></span>
-        </button>
+        <div className={headerStyles.navigation}>
+          <input
+            type="checkbox"
+            id="navi-toggle"
+            className={headerStyles.checkBox}
+          />
+          <label htmlFor="navi-toggle" className={headerStyles.checkLabel}>
+            <span className={headerStyles.icon}></span>
+          </label>
+          <div className={headerStyles.navigationBackground}></div>
+          <nav className={headerStyles.nav}>
+            <ul className={headerStyles.list}>
+              <li className={headerStyles.item}>
+                <a href="#work" className={headerStyles.link}>
+                  Work
+                </a>
+              </li>
+              <li className={headerStyles.item}>
+                <a href="#work" className={headerStyles.link}>
+                  Solutions
+                </a>
+              </li>
+              <li className={headerStyles.item}>
+                <a href="#work" className={headerStyles.link}>
+                  Services
+                </a>
+              </li>
+              <li className={headerStyles.item}>
+                <a href="#work" className={headerStyles.link}>
+                  About us
+                </a>
+              </li>
+              <li className={headerStyles.item}>
+                <a href="#work" className={headerStyles.link}>
+                  Blog
+                </a>
+              </li>
+              <li className={headerStyles.item}>
+                <a href="#work" className={headerStyles.link}>
+                  Request a quote
+                </a>
+              </li>
+              <li className={headerStyles.item}>
+                <a href="#work" className={headerStyles.link}>
+                  {"Let's chat"}
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </nav>
     </header>
   );

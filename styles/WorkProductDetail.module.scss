@@ -9,7 +9,6 @@
   div {
     a {
       display: flex;
-      align-items: center;
       transition: all 500ms linear;
 
       span:first-child {
@@ -18,11 +17,18 @@
       }
 
       span:last-child {
-        transition: all 400ms ease-in-out;
-      }
+        &::after {
+          content: "";
+          display: inline-block;
+          height: 1px;
+          width: 0;
+          background-color: $grayColor;
+          transition: all 400ms ease-in-out;
+        }
 
-      &:hover span:last-child {
-        border-bottom: 1px solid $grayColor;
+        &:hover::after {
+          width: 100%;
+        }
       }
     }
   }
