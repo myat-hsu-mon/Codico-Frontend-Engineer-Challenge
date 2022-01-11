@@ -116,7 +116,10 @@ const Header: NextPage = () => {
                 </a>
               </li>
               <li className={headerStyles.item}>
-                <a href="#work" className={headerStyles.link}>
+                <a
+                  href="#work"
+                  className={[headerStyles.link, headerStyles.scale].join(" ")}
+                >
                   Request a quote
                 </a>
               </li>

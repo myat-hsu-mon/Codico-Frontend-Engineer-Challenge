@@ -8,18 +8,19 @@
 
   div {
     a {
-      display: flex;
-      transition: all 500ms linear;
-
-      span:first-child {
-        margin-right: 5px;
+      .arrow {
+        display: inline-block;
+        margin-right: 0.5rem;
         color: $primaryColor;
       }
 
-      span:last-child {
+      .backText {
+        display: inline-block;
+        transition: all 0.3s;
+
         &::after {
           content: "";
-          display: inline-block;
+          display: block;
           height: 1px;
           width: 0;
           background-color: $grayColor;
@@ -33,7 +34,7 @@
     }
   }
   .requestBtn {
-    color: #fff;
+    color: $whiteColor;
     font-size: 0.9rem;
     font-weight: 300;
     margin-left: 2.5rem;
@@ -50,99 +51,183 @@
 }
 
 .body {
-  padding: 7rem 0;
-  display: grid;
-  grid-template-columns: auto 1fr 1fr auto;
-  column-gap: 1rem;
-  align-items: center;
+  padding: 8rem 0;
+  position: relative;
 
-  .arrowLeft {
-    order: 1;
-    padding: 2rem;
-    background-color: $primaryColor;
-    border-radius: 50%;
-    color: $whiteColor;
-    margin-left: -2rem;
-    transition: all 400ms ease-in-out;
-    &:hover {
-      padding: 2.5rem;
-      box-shadow: 0 8px 20px 0 rgb(0 0 0 / 20%), 0 0 0 0 rgb(0 0 0 / 10%);
-    }
-  }
+  .wrapper {
+    margin: 0 auto;
+    display: block;
+    width: 90%;
 
-  .arrowRight {
-    order: 4;
-    padding: 2rem;
-    background-color: $primaryColor;
-    border-radius: 50%;
-    color: $whiteColor;
-    margin-right: -2rem;
-    transition: all 400ms ease-in-out;
-    &:hover {
-      padding: 2.5rem;
-      box-shadow: 0 8px 20px 0 rgb(0 0 0 / 20%), 0 0 0 0 rgb(0 0 0 / 10%);
-    }
-  }
+    .detail {
+      display: inline-block;
+      width: 50%;
+      margin-top: 0;
+      vertical-align: middle;
 
-  .detail {
-    order: 2;
-    padding-left: 2rem;
-
-    h2 {
-      margin-top: 0.5rem;
-      font-size: 5rem;
-      font-weight: 900;
-    }
-    p {
-      font-size: 1.1rem;
-      font-weight: 200;
-      max-width: 40rem;
-      line-height: 150%;
-    }
-    .flex {
-      display: flex;
-      align-items: flex-start;
-      margin-top: 5rem;
-      div {
-        font-size: 1.2rem;
-        font-weight: 700;
-        padding-right: 4rem;
-        padding-bottom: 2rem;
+      h2 {
+        font-size: 5rem;
+        font-weight: 900;
       }
-      & > div:last-child {
-        padding-left: 1rem;
-        border-left: 1px solid $dividerColor;
-
+      p {
+        font-size: 1.1rem;
+        font-weight: 200;
+        max-width: 40rem;
+        line-height: 150%;
+      }
+      .flex {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 5rem;
         div {
           font-size: 1.2rem;
-          font-weight: 100;
+          font-weight: 700;
+          padding-right: 4rem;
+          padding-bottom: 2rem;
+        }
+        & > div:last-child {
+          padding-left: 1rem;
+          border-left: 1px solid $dividerColor;
+
+          div {
+            font-size: 1.2rem;
+            font-weight: 100;
+          }
+        }
+      }
+    }
+
+    .slider {
+      // order: 3;
+      animation: fadeIn 1s ease forwards;
+      transition: all 400ms ease;
+      display: inline-block;
+      width: 3%;
+      position: relative;
+      left: 20rem;
+      border-radius: 50%;
+      vertical-align: middle;
+
+      @keyframes fadeIn {
+        100% {
+          transform: scale(15);
+        }
+      }
+
+      .imageContainer {
+        animation: imageFadeIn 0.6s ease forwards;
+        transition: all 0.6s ease;
+        transform: translateY(2rem);
+      }
+
+      @keyframes imageFadeIn {
+        100% {
+          transform: translate(0);
         }
       }
     }
   }
+}
 
-  .slider {
-    order: 3;
-    border-radius: 50%;
-    animation: fadeIn 400ms ease-in-out;
-    transition: all 400ms ease-in-out;
+.arrowLeft {
+  // order: 1;
+  padding: 2rem;
+  background-color: $primaryColor;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  color: $whiteColor;
+  margin-left: -2rem;
+  transition: all 400ms ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 40%;
+  &:hover {
+    padding: 2.5rem;
+    margin-left: -2.5rem;
+    box-shadow: 0 8px 20px 0 rgb(0 0 0 / 20%), 0 0 0 0 rgb(0 0 0 / 10%);
+  }
+}
 
-    .imageContainer {
-      animation: imageFadeIn 600ms ease-in-out;
-      transition: all 600ms ease-in-out;
+.arrowRight {
+  // order: 4;
+  padding: 2rem;
+  background-color: $primaryColor;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  color: $whiteColor;
+  margin-right: -2rem;
+  transition: all 400ms ease-in-out;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  &:hover {
+    padding: 2.5rem;
+    margin-right: -2.5rem;
+    box-shadow: 0 1.5rem 4rem 0 rgb(0 0 0 / 20%), 0 0 0 0 rgb(0 0 0 / 10%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .body {
+    .wrapper {
+      .slider {
+        left: 15rem;
+      }
     }
   }
 }
 
-@media only screen and (max-width: 960px) {
-  .body {
-    grid-template-columns: 1fr;
-    .slider {
-      order: 2;
-    }
-    .arrowLeft,
-    .arrowRight {
+@media only screen and (max-width: 980px) {
+  .header {
+    .requestBtn {
       display: none;
+    }
+  }
+  .body {
+    padding-bottom: 15rem;
+    .arrowLeft {
+      top: 92%;
+      left: 10rem;
+    }
+    .arrowRight {
+      top: 92%;
+      right: 10rem;
+    }
+
+    .wrapper {
+      position: relative;
+      .detail {
+        display: block;
+        width: 100%;
+
+        h2 {
+          font-size: 3rem;
+        }
+      }
+      .slider {
+        display: block;
+        left: 0;
+        margin: auto;
+        @keyframes fadeIn {
+          100% {
+            transform: scale(1);
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .body {
+    .arrowLeft {
+      top: 92%;
+      left: 2.5rem;
+    }
+    .arrowRight {
+      top: 92%;
+      right: 2.5rem;
     }
   }
 }

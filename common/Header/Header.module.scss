@@ -116,7 +116,7 @@
     background-color: $accentColor;
     position: absolute;
     top: -1.5rem;
-    right: 1rem;
+    right: 0.5rem;
     z-index: 1500;
     transition: all 0.4s;
 
@@ -170,8 +170,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+    width: 0;
+    height: 0;
 
     .list {
       display: inline-block;
@@ -194,16 +194,25 @@
           font-weight: 700;
           letter-spacing: 1px;
           color: $whiteColor;
+          transition: all 0.3s ease;
+          display: inline-block;
+
+          &:hover.scale {
+            transform: scale(1.1);
+          }
         }
       }
     }
   }
 
-  .checkBox:checked ~ .navigationBackground {
-    transform: scale(63);
-  }
+  // .checkBox:checked ~ .navigationBackground {
+  //   transform: scale(63);
+  // }
 
   .checkBox:checked ~ .nav {
+    width: 100%;
+    height: 100%;
+
     .list {
       opacity: 100;
       visibility: visible;
@@ -231,6 +240,10 @@
 @media only screen and (max-width: 960px) {
   .navigation {
     display: block;
+
+    .checkBox:checked ~ .navigationBackground {
+      transform: scale(63);
+    }
   }
   .show {
     display: flex !important;
@@ -274,5 +287,21 @@
 
   .navMenu.active {
     left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    .checkBox:checked ~ .navigationBackground {
+      transform: scale(60);
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .navigation {
+    .checkBox:checked ~ .navigationBackground {
+      transform: scale(55);
+    }
   }
 }
